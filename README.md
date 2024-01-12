@@ -1,13 +1,32 @@
-# Sample Hardhat Project
+# MySepolia Sample ETH Sepolia Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## Prerequisites
 
-Try running some of the following tasks:
+- [Node.js](https://nodejs.org/en/) (>= 10.16.0)
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+## Deployment
+
+1. Install project
+
+```bash
+npm init --yes
+npm install --force
+npx hardhat init
+```
+
+2. Create an `.env` file from the `.env.example`
+
+3. Deploy with
+
+```bash
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+4. Fill out `CONTRACT_ADDRESS` in `.env` with the deployed contract address
+
+5. _(Optional)_ Run interaction
+
+```bash
+npx hardhat run scripts/interact.js --network sepolia
 ```
